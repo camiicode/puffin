@@ -1,3 +1,17 @@
+# Puffin — Tiny, cute desktop companion 😋
+
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+
+[Report a Bug](https://github.com/Mixxy-Studio/TomaNote/issues) | [Request a Feature](https://github.com/Mixxy-Studio/TomaNote/issues)
+
+[!["Buy Me A Coffee"](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dftp930)
+
+</div>
+
 # puffin 🫧
 
 > A tiny, cute desktop companion that lives on your screen.  
@@ -12,11 +26,8 @@ Simple, minimal, and a little bit alive 💗
 
 - 🫧 **3 emotional states** — `iddle` (neutral), `happy` (excited), `bored` (needs attention)
 - 🎨 **Pure CSS character** — No sprites, no images. Every expression is drawn with CSS
-- 🖱️ **Click to change mood** — Tap the bubble and watch it react
 - ⏱️ **Auto mood changes** — Gets bored if you ignore it, happy when you interact
-- 🪟 **Desktop overlay** — Always-on-top, transparent window that sits on your screen
 - 🧲 **Draggable** — Move it anywhere you like
-- 🔮 **Extensible** — Easy to add new states, animations, or sounds
 
 ---
 
@@ -133,6 +144,8 @@ PRs welcome! Ideas:
 - More facial expressions (surprised, angry, love)
 - Seasonal themes (snow on bubble, flower crown)
 - Plugin system for community-made states
+
+[!["Buy Me A Coffee"](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dftp930)
 
 ## 📄 License
 
