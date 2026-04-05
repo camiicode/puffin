@@ -2,9 +2,10 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Status](https://img.shields.io/badge/status-active-success.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Tauri](https://img.shields.io/badge/Tauri-2.0-purple)
+![Status](https://img.shields.io/badge/status-MVP-orange)
 
 [Report a Bug](https://github.com/Mixxy-Studio/TomaNote/issues) | [Request a Feature](https://github.com/Mixxy-Studio/TomaNote/issues)
 
@@ -12,7 +13,7 @@
 
 </div>
 
-# puffin 🫧
+# Puffin 🫧
 
 > A tiny, cute desktop companion that lives on your screen.  
 > Built with **Tauri** + **CSS** — no sprites, just pure bubbly personality.
@@ -24,7 +25,7 @@ Simple, minimal, and a little bit alive 💗
 
 ## ✨ Current features
 
-- 🫧 **3 emotional states** — `iddle` (neutral), `happy` (excited), `bored` (needs attention)
+- 🫧 **3 emotional states** — `idle` (neutral), `happy` (excited), `bored` (needs attention)
 - 🎨 **Pure CSS character** — No sprites, no images. Every expression is drawn with CSS
 - ⏱️ **Auto mood changes** — Gets bored if you ignore it, happy when you interact
 - 🧲 **Draggable** — Move it anywhere you like
@@ -92,7 +93,7 @@ Demonstrate how to create a lightweight, stateful desktop mascot without raster 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/puffin
+git clone https://github.com/camiicode/puffin
 cd puffin
 
 # Install dependencies
