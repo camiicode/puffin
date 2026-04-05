@@ -93,3 +93,52 @@ npm run tauri dev
 # Build for production
 npm run tauri build
 ```
+
+## 🎨 Customization
+
+**Add a new emotion**
+
+1. Add CSS class: .state-sleep .mouth { ... }
+2. Add to states array in main.js
+3. Trigger with mascot.setState('sleep')
+
+**Change bubble color**
+Edit background property in .bubble selector
+
+**Modify inactivity timeout**
+Change 15000 (ms) in setupInactivityDetection()
+
+## 🐞 Current limitations
+
+- Single bubble (no multiple companions… yet)
+- No sound effects
+- No persistent position memory across app restarts
+- Windows/Linux only (macOS needs permission tweaks for overlay)
+
+## 🗺️ Roadmap (ideas)
+
+- Sound effects for mood changes
+- Dragging with inertia
+- Right-click context menu
+- Multiple bubble colors (user selectable)
+- System idle API integration (instead of custom timer)
+- Speech bubble with random messages
+- Follows mouse on double-click
+- Mini-games (pop the bubble, catch the fly)
+
+## 🤝 Contributing
+
+PRs welcome! Ideas:
+
+- More facial expressions (surprised, angry, love)
+- Seasonal themes (snow on bubble, flower crown)
+- Plugin system for community-made states
+
+## 📄 License
+
+MIT — go ahead, make your own digital pet 🐱
+
+## 💬 Why "Puffin"?
+
+Because puffins are round, cute, and a little bit clumsy — just like this bubble.
+Also, "puff" sounds like a soft bubble pop. Puff! 🫧
