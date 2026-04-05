@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  /* Evita seleccionar texto al arrastrar */
+}
+
+body {
+  background: transparent;
+  /* Importante para overlay */
+  overflow: hidden;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mascot-container {
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+.bubble {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, rgba(135, 206, 250, 0.9), rgba(0, 191, 255, 0.8));
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Efecto de brillo */
+.bubble::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+/* Cara */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyes {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.eye {
+  width: 15px;
+  height: 15px;
+  background: #2c3e50;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+/* Estado IDDLE (normal) */
+.state-iddle .mouth {
+  width: 30px;
+  height: 4px;
+  background: #2c3e50;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+/* Estado HAPPY */
+.state-happy .mouth {
+  width: 25px;
+  height: 15px;
+  background: transparent;
+  border-bottom: 4px solid #2c3e50;
+  border-radius: 0 0 20px 20px;
+  margin-top: 5px;
+}
+
+.state-happy .eye {
+  transform: scaleY(0.8);
+  animation: blink 0.5s ease-in-out 2;
+}
+
+/* Estado BORED */
+.state-bored .mouth {
+  width: 30px;
+  height: 4px;
+  background: #2c3e50;
+  border-radius: 2px;
+  margin-top: 15px;
+  transform: rotate(180deg);
+}
+
+.state-bored .eye {
+  animation: droop 2s ease-in-out infinite;
+}
+
+/* Animaciones */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes droop {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+/* Efecto hover para interacción */
+.bubble:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Indicador de estado (debug) */
+.state-indicator {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.mascot-container {
+  -webkit-app-region: drag;
+  /* Para arrastrar en Tauri/Electron */
+}
+
+.bubble {
+  -webkit-app-region: no-drag;
+  /* Evita que el bubble interfiera */
+}
+
+.close-btn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  -webkit-app-region: no-drag;
+}
+
+#app:hover .close-btn {
+  opacity: 1;
+}
+
+.close-btn:hover {
+  background: #ff4757;
+}
